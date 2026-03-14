@@ -1,3 +1,5 @@
+"use client"
+
 import { Paintbrush, Wrench, ClipboardList, Car, KeyRound, Settings } from "lucide-react"
 // Services: Spuitwerk, Schadeherstel, Reparaties, Taxatie, VAG Codering, Onderdelen
 
