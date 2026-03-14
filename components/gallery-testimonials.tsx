@@ -54,25 +54,25 @@ const galleryItems = [
 const testimonials = [
   {
     name: "Mohammed El Amrani",
-    location: "Antwerpen",
+    location: "Amsterdam",
     rating: 5,
     text: "Absolute topservice! Mijn auto had zware schade na een aanrijding en Garage Turkuaz heeft hem perfect hersteld. De kleur is exact gematcht en de afwerking is onberispelijk. Sterk aanbevolen!",
   },
   {
     name: "Katrien Vermeersch",
-    location: "Gent",
+    location: "Zaandam",
     rating: 5,
     text: "Professioneel, snel en eerlijk. Ze hebben mijn auto op tijd teruggegeven en de prijs was precies zoals afgesproken. Het resultaat overtrof mijn verwachtingen. Ik kom zeker terug!",
   },
   {
     name: "Pieter De Smedt",
-    location: "Brussel",
+    location: "Amsterdam",
     rating: 5,
     text: "Na een hagelbui had mijn auto talloze deuken. Garage Turkuaz heeft alles hersteld zonder spoor. Geweldig vakmanschap en vriendelijk team. Echt een aanrader voor iedereen.",
   },
   {
     name: "Nadia Boukhari",
-    location: "Leuven",
+    location: "Haarlem",
     rating: 5,
     text: "Uitstekende communicatie van begin tot einde. Ze legden alles duidelijk uit, werkten via mijn verzekering en leverden mijn auto af als nieuw. Vijf sterren zonder twijfel!",
   },
