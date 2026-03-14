@@ -22,27 +22,7 @@ export default function About() {
   return (
     <section id="over-ons" className="py-24 bg-[oklch(0.13_0.01_220)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image side */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src="https://placehold.co/700x550?text=Skilled+auto+technician+in+professional+garage+inspecting+car+body+damage+under+workshop+lighting"
-                alt="Vakkundige monteur inspecteert carrosserieschade in Garage Turkuaz"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            {/* Floating stat card */}
-            <div className="absolute -bottom-6 -right-6 bg-[oklch(0.55_0.16_195)] rounded-2xl p-6 shadow-2xl">
-              <p className="text-4xl font-bold text-white">15+</p>
-              <p className="text-white/80 text-sm mt-1">Jaar vakmanschap</p>
-            </div>
-            {/* Teal border accent */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-[oklch(0.55_0.16_195)]/40 rounded-2xl -z-10" />
-          </div>
-
-          {/* Text side */}
-          <div>
+        <div className="max-w-4xl mx-auto text-center">
             <p className="text-[oklch(0.55_0.16_195)] text-sm font-semibold tracking-widest uppercase mb-3">
               Over ons
             </p>
@@ -55,14 +35,14 @@ export default function About() {
               geavanceerde apparatuur leveren wij topkwaliteit werk op tijd en
               binnen budget.
             </p>
-            <p className="text-white/60 text-base leading-relaxed mb-8 text-pretty">
+            <p className="text-white/60 text-base leading-relaxed mb-10 text-pretty">
               Wij werken met de nieuwste laktechnologieën en milieuvriendelijke
               materialen. Uw voertuig wordt behandeld met de zorg die het
               verdient — alsof het ons eigen is.
             </p>
 
             {/* Highlights list */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 text-left max-w-2xl mx-auto">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <CheckCircle2
@@ -85,7 +65,6 @@ export default function About() {
               Neem contact op
             </a>
           </div>
-        </div>
 
         {/* Stats bar */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16">
