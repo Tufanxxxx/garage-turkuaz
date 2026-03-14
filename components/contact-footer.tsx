@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Openingsuren",
-    value: "Ma–Vr: 09:00–18:00 | Za–Zo: Gesloten",
+    value: "Ma–Vr: 09:00–18:00 | Za: 09:00–16:00 | Zo: Gesloten",
     href: null,
   },
 ]
@@ -366,5 +366,8 @@ export default function ContactFooter() {
         </div>
       </footer>
     </>
+  )
+}
+
   )
 }
