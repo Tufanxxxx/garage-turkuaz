@@ -5,34 +5,34 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const galleryItems = [
   {
-    src: "https://placehold.co/600x450?text=Red+sedan+car+after+professional+full+body+respray+with+deep+glossy+finish+in+garage",
-    alt: "Rode sedan na professioneel volledig spuitwerk met diep glanzende lak",
-    label: "Volledig spuitwerk",
+    src: "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&h=450&fit=crop",
+    alt: "Auto spuitcabine met professioneel spuitwerk bezig",
+    label: "Professioneel spuitwerk",
   },
   {
-    src: "https://placehold.co/600x450?text=Car+door+panel+dent+removal+and+paint+restoration+before+and+after+comparison",
-    alt: "Portier paneelreparatie voor en na schadeherstel",
-    label: "Deuk- en schadeherstel",
+    src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=450&fit=crop",
+    alt: "Carrosserie schadeherstel op een auto in de werkplaats",
+    label: "Schadeherstel",
   },
   {
-    src: "https://placehold.co/600x450?text=Silver+BMW+bumper+collision+repair+freshly+painted+and+polished+in+workshop",
-    alt: "Zilveren BMW bumper na botsingsreparatie, gespoten en gepolijst",
+    src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=450&fit=crop",
+    alt: "Automonteur bezig met reparatie in de garage",
+    label: "Autoreparatie",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=600&h=450&fit=crop",
+    alt: "Auto bumper reparatie en spuitwerk in moderne garage",
     label: "Bumperherstel",
   },
   {
-    src: "https://placehold.co/600x450?text=Black+luxury+car+hood+with+deep+scratch+professionally+repaired+and+color+matched",
-    alt: "Zwarte motorkap met diepe kras professioneel hersteld en kleur bijgewerkt",
-    label: "Krasreparatie",
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop",
+    alt: "Glanzende auto na professionele lakbehandeling",
+    label: "Lakbehandeling",
   },
   {
-    src: "https://placehold.co/600x450?text=White+car+rust+treatment+and+underbody+coating+applied+in+modern+workshop",
-    alt: "Witte auto roestbehandeling en onderbody coating aangebracht",
-    label: "Roestbehandeling",
-  },
-  {
-    src: "https://placehold.co/600x450?text=Glossy+blue+sports+car+with+ceramic+coating+and+full+detail+finish+under+showroom+lighting",
-    alt: "Glanzende blauwe sportwagen met keramische coating en volledige detailing",
-    label: "Polijsten & Detailing",
+    src: "https://images.unsplash.com/photo-1493238792000-8113da705763?w=600&h=450&fit=crop",
+    alt: "Moderne autogarage werkplaats met voertuigen in herstel",
+    label: "Onze werkplaats",
   },
 ]
 
