@@ -12,7 +12,7 @@ const galleryItems = [
   {
     src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=450&fit=crop",
     alt: "Carrosserie schadeherstel op een auto in de werkplaats",
-    label: "Schadeherstel",
+    label: "Schadeherstel auto",
   },
   {
     src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=450&fit=crop",
@@ -20,9 +20,9 @@ const galleryItems = [
     label: "Autoreparatie",
   },
   {
-    src: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=600&h=450&fit=crop",
-    alt: "Auto bumper reparatie en spuitwerk in moderne garage",
-    label: "Bumperherstel",
+    src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=450&fit=crop",
+    alt: "Grote vrachtwagen cabine spuitwerk professioneel",
+    label: "Vrachtwagen spuitwerk",
   },
   {
     src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop",
@@ -30,9 +30,24 @@ const galleryItems = [
     label: "Lakbehandeling",
   },
   {
+    src: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=600&h=450&fit=crop",
+    alt: "Bumper reparatie en spuitwerk in moderne garage",
+    label: "Bumperherstel",
+  },
+  {
     src: "https://images.unsplash.com/photo-1493238792000-8113da705763?w=600&h=450&fit=crop",
     alt: "Moderne autogarage werkplaats met voertuigen in herstel",
     label: "Onze werkplaats",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=450&fit=crop",
+    alt: "Vrachtwagen oplegger schadeherstel en spuitwerk",
+    label: "Oplegger herstel",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=450&fit=crop",
+    alt: "Professionele carrosserie werkplaats met meerdere voertuigen",
+    label: "Carrosserie werkplaats",
   },
 ]
 

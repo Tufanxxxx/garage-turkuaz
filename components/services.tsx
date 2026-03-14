@@ -1,7 +1,6 @@
 "use client"
 
-import { Paintbrush, Wrench, ClipboardList, Car, KeyRound, Settings } from "lucide-react"
-// Services: Spuitwerk, Schadeherstel, Reparaties, Taxatie, VAG Codering, Onderdelen
+import { Paintbrush, Wrench, ClipboardList, Car, KeyRound, Settings, Truck } from "lucide-react"
 
 const services = [
   {
@@ -37,6 +36,13 @@ const services = [
     title: "Codering VAG Groep",
     description:
       "Gespecialiseerde codering en programmering van voertuigen uit de VAG-groep (Volkswagen, Audi, SEAT, Skoda). Vakkundige uitvoering met professionele diagnoseapparatuur.",
+    highlight: false,
+  },
+  {
+    icon: Truck,
+    title: "Vrachtwagens & Opleggers",
+    description:
+      "Gespecialiseerd in herstel en spuitwerk van vrachtwagens, bestelwagens en opleggers. Wij zorgen voor een perfecte afwerking van uw bedrijfsvoertuig.",
     highlight: false,
   },
   {

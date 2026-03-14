@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Navbar from "@/components/navbar"
-import { Calculator, ChevronRight, RotateCcw, Phone, CheckCircle2 } from "lucide-react"
+import Link from "next/link"
+import { Calculator, ChevronRight, RotateCcw, Phone, CheckCircle2, ArrowLeft } from "lucide-react"
 
 type Step = 1 | 2 | 3 | 4
 
@@ -12,6 +13,8 @@ const carTypes = [
   { id: "suv", label: "SUV / Crossover", sub: "Bijv. Tiguan, Qashqai, RAV4", factor: 1.4 },
   { id: "grote_auto", label: "Grote auto / Luxe", sub: "Bijv. BMW 5, Audi A6, Mercedes E", factor: 1.6 },
   { id: "bus", label: "Bestelwagen / Bus", sub: "Bijv. Transit, Sprinter, Crafter", factor: 1.8 },
+  { id: "vrachtwagen", label: "Vrachtwagen", sub: "Bijv. DAF, Volvo, Mercedes Actros", factor: 3.0 },
+  { id: "oplegger", label: "Oplegger / Trailer", sub: "Volledig oplegger of trailer", factor: 3.5 },
 ]
 
 const damageParts = [
@@ -29,6 +32,12 @@ const damageParts = [
   { id: "rechter_achterscherm", label: "Rechter achterscherm", basePrice: 460 },
   { id: "dak", label: "Dak", basePrice: 600 },
   { id: "dorpel", label: "Dorpel (links of rechts)", basePrice: 280 },
+  { id: "cabine_voor", label: "Cabine voorkant (vrachtwagen)", basePrice: 1200 },
+  { id: "cabine_zij", label: "Cabine zijkant (vrachtwagen)", basePrice: 900 },
+  { id: "oplegger_zij", label: "Oplegger zijwand", basePrice: 1500 },
+  { id: "oplegger_voor", label: "Oplegger voorkant", basePrice: 1100 },
+  { id: "oplegger_achter", label: "Oplegger achterkant", basePrice: 1000 },
+  { id: "chassis", label: "Chassis / onderstel", basePrice: 800 },
 ]
 
 const damageTypes = [
@@ -91,6 +100,13 @@ export default function CalculatorPage() {
       {/* Header */}
       <section className="bg-[oklch(0.13_0.01_220)] pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm font-medium mb-6 transition-colors"
+          >
+            <ArrowLeft size={14} />
+            Terug naar home
+          </Link>
           <div className="inline-flex items-center gap-2 bg-[oklch(0.55_0.16_195)]/20 text-[oklch(0.72_0.12_192)] text-sm font-semibold px-4 py-2 rounded-full mb-6">
             <Calculator size={14} />
             Schadecalculator
