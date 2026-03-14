@@ -22,7 +22,8 @@
     "lucide-react": "^0.400.0",
     "path": "latest",
     "url": "latest",
-    "@eslint/eslintrc": "latest"
+    "@eslint/eslintrc": "latest",
+    "nodemailer": "latest"
   },
   "devDependencies": {
     "typescript": "^5.0.0",

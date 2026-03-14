@@ -11,6 +11,8 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ]
 
+const calculatorLink = { label: "Schadecalculator", href: "/calculator" }
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -68,6 +70,12 @@ export default function Navbar() {
             </button>
           ))}
           <a
+            href={calculatorLink.href}
+            className="text-[oklch(0.72_0.12_192)] hover:text-white border border-[oklch(0.55_0.16_195)]/50 hover:border-[oklch(0.55_0.16_195)] text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 hover:bg-[oklch(0.55_0.16_195)]/10"
+          >
+            {calculatorLink.label}
+          </a>
+          <a
             href="tel:0203313295"
             className="flex items-center gap-2 bg-[oklch(0.55_0.16_195)] hover:bg-[oklch(0.48_0.16_195)] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
           >
@@ -100,6 +108,12 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+            <a
+              href={calculatorLink.href}
+              className="text-[oklch(0.72_0.12_192)] font-semibold py-3 border-b border-white/5 text-base"
+            >
+              {calculatorLink.label}
+            </a>
             <a
               href="tel:0203313295"
               className="flex items-center gap-2 justify-center bg-[oklch(0.55_0.16_195)] text-white font-semibold px-5 py-3 rounded-lg mt-3 transition-colors hover:bg-[oklch(0.48_0.16_195)]"

@@ -78,6 +78,12 @@ export default function Hero() {
             >
               Onze diensten
             </button>
+            <a
+              href="/calculator"
+              className="border border-[oklch(0.55_0.16_195)]/60 hover:border-[oklch(0.55_0.16_195)] text-[oklch(0.72_0.12_192)] font-semibold px-8 py-4 rounded-lg text-base transition-all duration-200 hover:bg-[oklch(0.55_0.16_195)]/10 text-center"
+            >
+              Schadecalculator
+            </a>
           </div>
         </div>
 

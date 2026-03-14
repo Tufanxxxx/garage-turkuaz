@@ -39,6 +39,8 @@ export default function ContactFooter() {
     bericht: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -46,9 +48,30 @@ export default function ContactFooter() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        setError("Er is iets misgegaan. Probeer het opnieuw of bel ons direct.")
+      }
+    } catch {
+      setError("Er is iets misgegaan. Probeer het opnieuw of bel ons direct.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -217,12 +240,16 @@ export default function ContactFooter() {
                       className="border border-[oklch(0.88_0.008_200)] rounded-lg px-4 py-3 text-sm text-[oklch(0.13_0.01_220)] placeholder-[oklch(0.48_0.01_215)]/60 focus:outline-none focus:border-[oklch(0.55_0.16_195)] focus:ring-2 focus:ring-[oklch(0.55_0.16_195)]/20 transition-all resize-none"
                     />
                   </div>
+                  {error && (
+                    <p className="text-red-500 text-sm">{error}</p>
+                  )}
                   <button
                     type="submit"
-                    className="flex items-center justify-center gap-2 bg-[oklch(0.55_0.16_195)] hover:bg-[oklch(0.48_0.16_195)] text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-[oklch(0.55_0.16_195)]/30 mt-1"
+                    disabled={loading}
+                    className="flex items-center justify-center gap-2 bg-[oklch(0.55_0.16_195)] hover:bg-[oklch(0.48_0.16_195)] disabled:opacity-60 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-[oklch(0.55_0.16_195)]/30 mt-1"
                   >
                     <Send size={16} />
-                    Bericht verzenden
+                    {loading ? "Verzenden..." : "Bericht verzenden"}
                   </button>
                 </form>
               )}
