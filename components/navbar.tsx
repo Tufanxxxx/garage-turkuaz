@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X, Phone } from "lucide-react"
 
 const navLinks = [
@@ -23,10 +24,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const pathname = usePathname()
+
   const handleNavClick = (href: string) => {
     setIsOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: "smooth" })
+    if (pathname !== "/") {
+      window.location.href = "/" + href
+    } else {
+      const el = document.querySelector(href)
+      if (el) el.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (
@@ -40,7 +47,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
         {/* Logo */}
         <button
-          onClick={() => handleNavClick("#home")}
+          onClick={() => pathname !== "/" ? (window.location.href = "/") : handleNavClick("#home")}
           className="flex items-center gap-3 group"
           aria-label="Garage Turkuaz - naar startpagina"
         >
