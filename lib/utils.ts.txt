@@ -1,29 +1,6 @@
-app/globals.css
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 
-app/layout.tsx
-
-components/navbar.tsx
-
-components/hero.tsx
-
-components/about.tsx
-
-components/gallery-testimonials.tsx
-
-components/services.tsx
-
-components/contact-footer.tsx
-
-app/page.tsx
-
-next.config.mjs
-
-.nvmrc
-
-.node-version
-
-eslint.config.mjs
-
-.vercelignore
-
-package.json
+export function cn(...inputs: ClassValue[]) {
+return twMerge(clsx(inputs))
+}
