@@ -47,6 +47,8 @@ export default function CalculatorPage() {
   const [naam, setNaam] = useState("")
   const [telefoon, setTelefoon] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
   const carType = carTypes.find((c) => c.id === selectedCar)
   const damageType = damageTypes.find((d) => d.id === selectedDamage)
@@ -275,13 +277,41 @@ export default function CalculatorPage() {
                   onChange={(e) => setTelefoon(e.target.value)}
                   className="flex-1 border border-[oklch(0.88_0.008_200)] rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[oklch(0.55_0.16_195)] bg-white"
                 />
+                {error && <p className="text-red-500 text-sm">{error}</p>}
                 <button
-                  disabled={!naam || !telefoon}
-                  onClick={() => setSubmitted(true)}
+                  disabled={!naam || !telefoon || loading}
+                  onClick={async () => {
+                    setLoading(true)
+                    setError("")
+                    try {
+                      const res = await fetch("/api/calculator", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                          naam,
+                          telefoon,
+                          voertuig: carType?.label,
+                          onderdelen: selectedParts.map((id) => damageParts.find((p) => p.id === id)?.label).join(", "),
+                          schade: damageType?.label,
+                          minPrijs: min.toLocaleString("nl-NL"),
+                          maxPrijs: max.toLocaleString("nl-NL"),
+                        }),
+                      })
+                      if (res.ok) {
+                        setSubmitted(true)
+                      } else {
+                        setError("Er is iets misgegaan. Bel ons direct op 020 331 32 95.")
+                      }
+                    } catch {
+                      setError("Er is iets misgegaan. Bel ons direct op 020 331 32 95.")
+                    } finally {
+                      setLoading(false)
+                    }
+                  }}
                   className="flex items-center gap-2 bg-[oklch(0.55_0.16_195)] hover:bg-[oklch(0.48_0.16_195)] disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-all text-sm whitespace-nowrap"
                 >
                   <Phone size={15} />
-                  Offerte aanvragen
+                  {loading ? "Verzenden..." : "Offerte aanvragen"}
                 </button>
               </div>
             </div>
